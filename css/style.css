@@ -1692,6 +1692,123 @@ transition: all .2s ease-in-out;
 }
 
 /* end map */
+/* footer */
+.footer {
+	background: #0a0a0a;
+	padding: 30px 0;
+}
+.bearcode-copyright .double-tab {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	text-decoration: none;
+	transition: all .2s linear;
+}
+.bearcode-copyright .double-tab:hover {
+	opacity: .6;
+}
+.bearcode-copyright {
+	max-width: 140px;
+}
+.bearcode-copyright .logo {
+	background: url(https://bearcode.com.ua/image/catalog/bearcode_white.png) 50% / contain no-repeat;
+	width: 50px;
+	padding-top: 30px;
+	margin-right: 10px;
+	display: block;
+}
+.bearcode-copyright .text {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-flow: column;
+	font-size: 12px;
+	align-items: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 700;
+}
+.footer .wrap {
+	max-width: 1340px;
+	width: 100%;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+.footer .wrap {
+	max-width: 1340px;
+	width: 100%;
+	margin: 0 auto;
+	color: #ffffff;
+
+}
+.footer .wrap .logo {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.footer .wrap .copy {
+	font: 300 12px Roboto, sans-serif;
+	letter-spacing: 1px;
+}
+.footer .wrap .logo img:nth-of-type(1) {
+    margin-right: 60px;
+}
+.footer .wrap .links {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.footer .wrap .links a {
+	width: 30px;
+	padding-top: 30px;
+	position: relative;
+	margin-right: 40px;
+}
+.footer .wrap .links a:last-child {
+	margin-right: 0;
+}
+.footer .wrap .links a:before {
+	content: "\e093";
+	position: absolute;
+	font-family: El;
+	font-size: 20px;
+	line-height: 1em;
+	left: 50%;
+	color: #ffffff;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.footer .wrap .links a:nth-of-type(2):before {
+	content: "\e0a3";
+}
+.footer .wrap .links a:nth-of-type(3):before {
+	content: "\e09d";
+}
+.footer .wrap .links a:nth-of-type(4):before {
+	content: "\e096";
+}
+/* end footer */
 /* adaptive */
 @media screen and (max-width: 1440px) {
 	.header .wrap,.hero .wrap,.about .wrap, .about-brand .wrap,.services .wrap {
@@ -2040,6 +2157,12 @@ transition: all .2s ease-in-out;
 	}
 	.services .wrap .items .item {
 		width: calc((100% / 1) - 40px);
+	}
+	.bearcode-copyright .double-tab {
+		flex-flow: column;
+	}
+	.bearcode-copyright {
+		max-width: 85px;
 	}
 }
 /* height */
