@@ -178,3 +178,45 @@ if (document.querySelector('.partners .video')) {
 		vid.pause();
 	}
 }
+google.maps.event.addDomListener(window, 'load', init);
+function init() {
+	var mapOptions = {
+		zoom: 16,
+		scrollwheel: false,
+		disableDefaultUI: true,
+		center: new google.maps.LatLng(50.4632219,30.5159238),
+		styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+	};
+	var mapElement = document.querySelector('.current-map');
+	var map = new google.maps.Map(mapElement, mapOptions);
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(50.4637883,30.5136455,18.89),
+		map: map,
+		title: 'Unimot Avia Ukraine',
+		icon: 'img/map-logo.png'
+	});
+
+	var mapOptions1 = {
+		zoom: 5,
+		scrollwheel: false,
+		disableDefaultUI: true,
+		center: new google.maps.LatLng(48.8192691,11.1070063),
+		styles:  [
+		{
+			featureType: "all",
+			elementType: "all",
+			stylers: [
+			{ saturation: -100 }
+			]
+		}
+		]
+	};
+	var mapElement1 = document.querySelector('.eu-map');
+	var map1 = new google.maps.Map(mapElement1, mapOptions1);
+	var marker1 = new google.maps.Marker({
+		position1: new google.maps.LatLng(48.8192691,11.1070063),
+		map: map1,
+		title: 'Unimot Avia Europe',
+		icon: 'img/map-logo.png'
+	});
+}
