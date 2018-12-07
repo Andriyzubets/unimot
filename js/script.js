@@ -164,3 +164,17 @@ if (document.querySelector('.sandwich-right-bar .nav-toggle')) {
 		}
 	}
 }
+if (document.querySelector('.partners .video')) {
+	play = document.querySelector('.partners .video .play')
+	lay = document.querySelector('.partners .video')
+	vid = document.querySelector('.partners .video video')
+	play.onclick = function(){
+		lay.classList.add('active');
+		vid.play();
+		// vid.setAttribute('controls', 'contols');
+	}
+	vid.onclick = function(){
+		lay.classList.remove('active');
+		vid.pause();
+	}
+}
