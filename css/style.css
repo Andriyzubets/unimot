@@ -1360,7 +1360,7 @@ transition: all .2s ease-in-out;
 	margin-right: 30px;
 }
 .downloads .link:hover {
-
+	box-shadow: 13px 19px 33px -17px #212121;
 }
 .downloads .link:hover .text {
 	background: #ffffff;
@@ -1375,7 +1375,7 @@ transition: all .2s ease-in-out;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	box-shadow: 13px 19px 33px -17px #212121;
+	transition: all .2s linear;
 }
 .downloads .link .text {
 	padding: 17px 20px;
@@ -1391,26 +1391,26 @@ transition: all .2s ease-in-out;
 	width: 50px;
 	transition: all .2s linear;
 }
-.downloads .link:nth-of-type(1):hover .img {
+/*.downloads .link:nth-of-type(1):hover .img {
 	background: url(../img/docs-icon.png) 50% / 45% no-repeat, #0a0a0a;
-}
+}*/
 .downloads .link:nth-of-type(2) .img {
 	background: url(../img/present-icon.png) 50% / 45% no-repeat, #ed1b24;
 	transition: all .2s linear;
 	width: 50px;
 }
-.downloads .link:nth-of-type(2):hover .img {
+/*.downloads .link:nth-of-type(2):hover .img {
 	background: url(../img/present-icon.png) 50% / 45% no-repeat, #0a0a0a;
-}
+}*/
 .downloads .link:nth-of-type(3) .img {
 	background: #ed1b24;
 	width: 50px;
 	transition: all .2s linear;
 	position: relative;
 }
-.downloads .link:nth-of-type(3):hover .img {
+/*.downloads .link:nth-of-type(3):hover .img {
 	background: #0a0a0a;
-}
+}*/
 .downloads .link:nth-of-type(3) .img:before {
 	position: absolute;
 	content: "\e090";
