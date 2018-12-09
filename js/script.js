@@ -12,25 +12,25 @@ if(document.querySelector('.hero .slider')) {
 	left = document.querySelector('.hero .slider .navs .left-arrow');
 	right = document.querySelector('.hero .slider .navs .right-arrow');
 
-	// sliderTop = setInterval(function(){
-	// 	changeSl();
-	// },2000)
-	// right.onmouseover = function(){
-	// 	clearInterval(sliderTop);
-	// }
-	// right.onmouseout = function(){
-	// 	sliderTop = setInterval(function(){
-	// 		changeSl();
-	// 	},2000)
-	// }
-	// left.onmouseover = function(){
-	// 	clearInterval(sliderTop);
-	// }
-	// left.onmouseout = function(){
-	// 	sliderTop = setInterval(function(){
-	// 		changeSl();
-	// 	},2000)
-	// }
+	sliderTop = setInterval(function(){
+		changeSl();
+	},2000)
+	right.onmouseover = function(){
+		clearInterval(sliderTop);
+	}
+	right.onmouseout = function(){
+		sliderTop = setInterval(function(){
+			changeSl();
+		},2000)
+	}
+	left.onmouseover = function(){
+		clearInterval(sliderTop);
+	}
+	left.onmouseout = function(){
+		sliderTop = setInterval(function(){
+			changeSl();
+		},2000)
+	}
 	right.onclick = forvSl();
 	left.onclick = retSl();
 	function changeSl() {
