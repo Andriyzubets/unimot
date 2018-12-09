@@ -220,3 +220,13 @@ function init() {
 		icon: 'img/map-logo.png'
 	});
 }
+let scroll = document.body.scrollTop;
+window.addEventListener('scroll', function() {
+	scroll = window.pageYOffset || document.documentElement.scroll;
+	document.querySelector('.header').classList.add('fixed')
+	if(scroll > 20) {
+
+	} else {
+		document.querySelector('.header').classList.remove('fixed');
+	}
+});
