@@ -231,15 +231,20 @@ window.addEventListener('scroll', function() {
 	}
 });
 if(document.querySelector('.call-me-btn')) {
-	cb = document.querySelectorAll('.call-me-btn');
-	for(i=0;i<cb.length;cb++){
-		cb[i].onclick = function(){
+	cbl = document.querySelectorAll('.call-me-btn');
+	for(i=0;i<cbl.length;i++){
+		cbl[i].onclick = cbo();
+	}
+	function cbo(){
+		return function(evt){
+			event.preventDefault();
 			if(!document.querySelector('.popup-callBack').classList.contains('active')) {
 				document.querySelector('.popup-callBack').classList.add('active')
 				document.querySelector('.popup-cb-bg').classList.add('active')
 			}
-
 		}
+		
+
 	}
 	document.querySelector('.popup-cb-bg').onclick = function(){
 		document.querySelector('.popup-callBack').classList.remove('active')
