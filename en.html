@@ -25,7 +25,7 @@
 		<div class="wrap">
 			<a href="" class="logo">
 				<img src="img/avia-logo.png" alt="AVIA">
-				<img src="img/unimot-logo-white.png" alt="UNIMOT">
+				<img src="img/unimot-logo-origin.png" alt="UNIMOT">
 			</a>
 			<nav class="main-menu">
 				<ul>
@@ -168,7 +168,7 @@
 					<div class="title">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos doloribus reprehenderit repellendus at cum nostrum rerum molestiae tempore beatae, nam quod ratione nemo nobis explicabo, aut dolorem quas, voluptatum soluta?
 					</div>
-					<a href="" class="partner-link">
+					<a class="partner-link">
 						Became a Partner
 					</a>
 				</div>
@@ -626,6 +626,36 @@
 			<form method="POST" id="call-me">
 				<input type="text" class="form-control" name="name" placeholder="Name" size="32">
 				<input type="tel" class="form-control" name="phone" placeholder="Phone" size="12">
+				<input name="submit" type="submit" id="submit" class="button-calc" value="Call me">
+			</form>
+		</div>
+		<div class="close"></div>
+	</div>
+	<div class="popup-pt-bg"></div>
+	<div class="popup-partner">
+		<div class="wrap">
+			<h2>
+				Please, enter information below, to let us contact You in shortly time
+			</h2>
+			<form method="POST" id="partner-form">
+				<label for="">Company
+					<input type="text" class="form-control" name="company" placeholder="" size="32">
+				</label>
+				<label for="">Your name
+					<input type="text" class="form-control" name="name" placeholder="" size="32">
+				</label>
+				<label for="">Phone number
+					<input type="text" class="form-control" name="tel" placeholder="" size="32">
+				</label>
+				<label for="">E-mail
+					<input type="text" class="form-control" name="email" placeholder="" size="32">
+				</label>
+				<select name="location" id="">
+					<option value="*">*</option>
+					<option value="Kyiv">Kyiv</option>
+					<option value="Kharkiv">Kharkiv</option>
+					<option value="Lviv">Lviv</option>
+				</select>
 				<input name="submit" type="submit" id="submit" class="button-calc" value="Call me">
 			</form>
 		</div>

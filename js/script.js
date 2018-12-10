@@ -254,6 +254,20 @@ if(document.querySelector('.call-me-btn')) {
 		document.querySelector('.popup-callBack').classList.remove('active')
 		document.querySelector('.popup-cb-bg').classList.remove('active')
 	}
+	document.querySelector('.partner-link').onclick = function(){
+		if(!document.querySelector('.popup-partner').classList.contains('active')) {
+			document.querySelector('.popup-partner').classList.add('active')
+			document.querySelector('.popup-pt-bg').classList.add('active')
+		}
+	}
+	document.querySelector('.popup-pt-bg').onclick = function(){
+		document.querySelector('.popup-partner').classList.remove('active')
+		document.querySelector('.popup-pt-bg').classList.remove('active')
+	}
+	document.querySelector('.popup-partner .close').onclick = function(){
+		document.querySelector('.popup-partner').classList.remove('active')
+		document.querySelector('.popup-pt-bg').classList.remove('active')
+	}
 }
 
 // slider
