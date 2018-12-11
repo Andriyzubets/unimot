@@ -269,7 +269,70 @@ if(document.querySelector('.call-me-btn')) {
 		document.querySelector('.popup-pt-bg').classList.remove('active')
 	}
 }
+if(document.querySelector('.services')) {
+	butts = document.querySelectorAll('.services .wrap .items .item');
+	pops = document.querySelectorAll('.popup-service');
+	sbg = document.querySelector('.popup-service-bg');
+	scl = document.querySelectorAll('.popup-service .close');
+	for(i=0;i<butts.length;i++){
+		butts[i].onclick = togg(i);
+	}
+	for(i=0;i<scl.length;i++){
+		scl[i].onclick = togg(i);
+	}
+	function togg(index){
+		return function(){
+			console.log('in')
+			if(!pops[index].classList.contains('active')){
+				pops[index].classList.add('active');
+				sbg.classList.add('active')
+			} else {
+				pops[index].classList.remove('active');
+				sbg.classList.remove('active')
+			}
+		}
+	}
+	sbg.onclick = function(){
+		for(i=0;i<pops.length;i++){
+			pops[i].classList.remove('active')
+			sbg.classList.remove('active')
+		}
+	}
+}
+// tabs 
+if(document.querySelector('.practice .head > div')) {
+	theads = document.querySelectorAll('.practice .head > div');
+	tabs = document.querySelectorAll('.practice .tab');
 
+	theads[0].onclick = function(){
+		if(!theads[0].classList.contains('active')) {
+			theads[0].classList.add('active');
+			theads[1].classList.remove('active');
+			tabs[1].classList.remove('op');
+			setTimeout(function(){
+				tabs[1].classList.remove('active');
+				tabs[0].classList.add('active');
+			},200)
+			setTimeout(function(){
+				tabs[0].classList.add('op');
+			},300)
+		}
+	}
+	theads[1].onclick = function(){
+		if(!theads[1].classList.contains('active')) {
+			theads[1].classList.add('active');
+			theads[0].classList.remove('active');
+			tabs[0].classList.remove('op');
+			setTimeout(function(){
+				tabs[0].classList.remove('active');
+				tabs[1].classList.add('active');
+			},200)
+			setTimeout(function(){
+				tabs[1].classList.add('op');
+			},300)
+		}
+	}
+}
 // slider
 jQuery(document).ready(function($){
 	var windowsWidth = jQuery(window).width();
