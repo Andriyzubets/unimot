@@ -273,6 +273,8 @@ a {
 	-ms-align-items: center;
 	align-items: center;
 	transition: all .2s linear;
+	background: #ffffff;
+    border: 3px solid #ed3833;
 }
 .header .wrap .logo:hover {
 	opacity: .8;
@@ -280,8 +282,8 @@ a {
 .header .wrap .logo img:nth-of-type(1) {
 	margin-right: 60px;
 	background: #fff;
-	padding: 10px 5px;
-	box-shadow: 0 1px 1px #ffffff;
+	padding: 10px;
+	/*box-shadow: 0 1px 1px #ffffff;*/
 }
 .header .wrap .logo img {
 	transition: all .2s linear;
@@ -292,9 +294,14 @@ a {
 	margin-right: 30px;
 	transform: translate(0,5px);
 	width: 60px;
+	box-shadow: 0 1px 1px #ffffff;
 }
 .header.fixed .wrap .logo img:nth-of-type(2) {
 	width: 90px;
+}
+.header.fixed .wrap .logo {
+	background: transparent;
+	border: none;
 }
 .header .wrap .main-menu ul {
 	display: -webkit-flex;
@@ -1595,7 +1602,7 @@ transition: all .2s ease-in-out;
 	background: url(../img/gas-icon.png) 50% / contain no-repeat;
 }
 .services .wrap .items .item:nth-of-type(4) .img {
-	background: url(../img/cafe-logo.png) 50% / contain no-repeat;
+	background: url(../img/coffee-logo.png) 50% / contain no-repeat;
 }
 .popup-service {
 	width: 85vw;
